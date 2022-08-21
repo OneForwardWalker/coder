@@ -1,7 +1,0 @@
-# [hashmap](dir/hashmap.md)
-# [java8 concurrentHashmap](dir/java8concurrenthashmap.md)
-# [ReentrantLock](dir/ReentrantLock.md)
-# [ThreadPoolExecutor](dir/ThreadPoolExecutor.md)
-# [String](dir/String.md) 
-# [Object](dir/Object.md) 
-# [ThreadLocal](dir/ThreadLcoal.md)
