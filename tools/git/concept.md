@@ -31,15 +31,74 @@ staging area: 暂存区
 local repository: 版本库、本地仓库
 remote repository: 远程仓库
 ## git仓库创建命令
-* git init
+* git init [dir]
 > 创建一个仓库
+```shell
+[root@VM-4-11-centos opt]# git init gitserver
+Initialized empty Git repository in /opt/gitserver/.git/
+[root@VM-4-11-centos opt]#
+[root@VM-4-11-centos opt]# ls
+bak_github  clone.log  containerd  data  gitserver  kafka  kafka_2.13-3.2.0  sentinel  software  time.log
+[root@VM-4-11-centos opt]# cd gitserver/
+[root@VM-4-11-centos gitserver]# ls -a
+.  ..  .git
+[root@VM-4-11-centos gitserver]#
 
+```
 * git clone [url]
-> 克隆一个仓库
-
+> 克隆一个仓库,注意URL，登录的用户需要gitserver这个目录的权限
+```shell
+[root@VM-4-11-centos gitc]# git clone root@150.158.192.228:/opt/gitserver/
+Cloning into 'gitserver'...
+root@150.158.192.228's password:
+warning: You appear to have cloned an empty repository.
+[root@VM-4-11-centos gitc]# ls -a
+.  ..  gitserver
+[root@VM-4-11-centos gitc]#
+```
 
 ## 提交与修改
-* git add
+* git add [file1] [file2]
+> git status查看添加的内容
+```shell
+[root@VM-4-11-centos gitserver]# ls -a
+.  ..  .git
+[root@VM-4-11-centos gitserver]# touch 1.txt
+[root@VM-4-11-centos gitserver]# touch 2.txt
+[root@VM-4-11-centos gitserver]# git add
+1.txt  2.txt
+[root@VM-4-11-centos gitserver]# git add 1.txt 2.txt
+[root@VM-4-11-centos gitserver]# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.txt
+        new file:   2.txt
+
+[root@VM-4-11-centos gitserver]# touch 3.txt
+[root@VM-4-11-centos gitserver]# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.txt
+        new file:   2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        3.txt
+
+[root@VM-4-11-centos gitserver]#
+
+```
+
+* git add [dir]
+* git add .
 * git status
 * git diff
 
