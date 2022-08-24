@@ -97,15 +97,36 @@ Untracked files:
 
 ```
 
-* git add [dir]
+* git add [dir] [dir]
+> 添加文件夹包含文件夹里面的文件，可以追加多个
 * git add .
-* git status
+> 会递归添加本目录下的文件和文件夹
+* git status [-s]
+> 用于查看是否在上次提交之后对文件进行了修改。-s用于获取简短的输出
 * git diff
-
-* git commit
-* git reset
+> 1. 比较文件在工作区和暂存区的区别,新增文件并且没有add的话不会显示差异
+> 2. 显示已写入缓存区和已修改但是没有写入缓存区的文件的差异
+应用场景：
+1. 工作区和缓存区的差异 git diff [file] [file]
+add之后才会比较出差异
+2. 显示暂存区和上一次提交的差异 git diff --cached [file] [file]  git diff --staged [file] [file]
+3. 显示两次提交之前的差异 git diff [first-branch]...[second-branch]
+* git commit -m "xx"
+> 提交暂存区到本地仓库中
+* git commit [file1] [file2] -m "xx"
+> 提交制定的暂存区的文件到仓库中
+* git commit -a
+> 设置工作区的修改（必须是已经跟踪的文件，新增没有add过的文件不生效）不需要add直接提交到本地的版本库
+* git reset [--soft | --mixed | --hard] [HEAD] [file] [file]
+> 回退  
+> --mixed : 默认的操作，只是把暂存区的修改会退到制定的提交点
+> --soft :  
+> --hard : 撤销工作区和暂存区的修改，并且删除之前所有的信息提交（指定提交点之后的记录都会被清除）
 * git rm
-* git mv
+> 1. 从暂存区删除，工作区保留，git rm --cached [file] [file]
+> 2. 从工作区和暂存区删除，git rm [file]  强制删除 git rm -f [file]
+* git mv [-f] [file] [newfile]
+> 重命名或者移动文件
 
 ## 提交日志
 * git log
@@ -115,6 +136,5 @@ Untracked files:
 * git fetch
 * git pull
 * git push
-
 
 
