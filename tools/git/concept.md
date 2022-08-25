@@ -129,12 +129,41 @@ add之后才会比较出差异
 > 重命名或者移动文件
 
 ## 提交日志
-* git log
+* git log  git log --oneline
+> git log查看提交记录  
+> git log --oneline 查看简洁的信息
 * git blame <file>
+> 以列表形式查看指定文件的历史修改记录
 ## 远程操作
 * git remote
+> 用于对远程仓库的操作，
 * git fetch
+> 拉取远程分支的修改到本地，但是不会体现在工作区(需要git merge来合并)
 * git pull
+> git fetch + git merge
 * git push
+> 推动本地版本库到远程仓库
+# 分支操作
+* git branch xxx
+> 创建一个xxx分支
+* git checkout xxx
+> 切换分支
+* git merge  xxx
+> 合并到当前分支下面
 
+* git branch
+> 列出分支
+* git checkout -b xxx
+> 创建分支并且切换到这个分支下面
+* git branch -d xxx
+> 删除分支
+# 标签
+* git tag
+> 查看标签
+* git tag -a v1.0
+> 打标签，带注释（只是注释了下这个tag是谁打的）
+* git tag -a -v2.0 xxx
+> 对指定的提交建立tag
+* git tag -a -m "发布"
+> 打标签，带描述
 
