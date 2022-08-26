@@ -166,4 +166,8 @@ add之后才会比较出差异
 > 对指定的提交建立tag
 * git tag -a -m "发布"
 > 打标签，带描述
-
+# git服务器搭建
+* git init xxx
+* mkdir xxx,cd xxx,git init
+* git clone user@ip:/xxx
+> 这里需要这个用户有读写git服务器文件的权限
