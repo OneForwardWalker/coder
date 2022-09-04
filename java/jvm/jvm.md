@@ -1,5 +1,5 @@
 # jvm
-[jvm](https://www.bilibili.com/video/BV1Jv41157Wu?p=1&vd_source=f12804ee4e79e35de3222877ad6bbc51)
+[p1](https://www.bilibili.com/video/BV1Jv41157Wu?p=1&vd_source=f12804ee4e79e35de3222877ad6bbc51)
 # java跨平台
 JVM屏蔽了操作系统的差异，可以理解为不同的操作系统都有实现自己的JVM
 # jvm组成
@@ -18,4 +18,7 @@ JVM屏蔽了操作系统的差异，可以理解为不同的操作系统都有�
 * 本地方法栈
 ## 字节码执行引擎
 # javap -c 
-反汇编字节码文件，可读性好一点
+反汇编字节码文件，可读性好一点  
+
+---
+[p2](https://www.bilibili.com/video/BV1Jv41157Wu?p=2&spm_id_from=pageDriver&vd_source=f12804ee4e79e35de3222877ad6bbc51)
