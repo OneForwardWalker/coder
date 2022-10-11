@@ -46,6 +46,7 @@ class Solution {
         if (begin < end) {
             int randomIndex = new Random().nextInt(end - begin + 1) + begin;
             int key = nums[randomIndex];
+            // 没有这一步是不行的，为哈需要这一步
             nums[randomIndex] = nums[begin];
             int i = begin;
             int j = end;
